@@ -10,10 +10,10 @@ The code for the guided project will be written in a single file for simplicity.
 
 - [Postman](https://www.getpostman.com/downloads/) installed.
 
-## Starter Code
+## Project Setup
 
-The starter code for this example is configured to run the server by typing `yarn server` or `npm run server`. The server will restart automatically on changes.
+- [ ] fork and clone this repository.
+- [ ] **CD into the folder** where you cloned **your fork**.
+- [ ] type `yarn` or `npm i` to download dependencies.
 
-Data for the API will be stored in memory using an array.
-
-Follow along as the intstructor walks you through building the API.
+Please follow along as the instructor builds the API step by step.
