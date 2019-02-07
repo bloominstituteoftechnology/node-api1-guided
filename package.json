@@ -1,0 +1,32 @@
+{
+  "name": "webapi-hubs",
+  "version": "1.0.0",
+  "description": "Hubs guided project for Web API I module.",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LambdaSchool/webapi-hubs.git"
+  },
+  "keywords": [
+    "backend",
+    "guided",
+    "hubs",
+    "lambda",
+    "api"
+  ],
+  "author": "Lambda School",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LambdaSchool/webapi-hubs/issues"
+  },
+  "homepage": "https://github.com/LambdaSchool/webapi-hubs#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  },
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
