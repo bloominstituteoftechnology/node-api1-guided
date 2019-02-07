@@ -4,7 +4,7 @@ Guided project for **Web API I** module.
 
 In this project students will learn how to create a very simple Web API using `Node.js` and `Express`. They will be introduced to server-side `routing` and how to use global `middleware`.
 
-The whole demo will be written in a single file for simplicity. We'll see ways to structure an API to make it more maintainable in upcoming lectures.
+The code for the guided project will be written in a single file for simplicity. We'll see ways to structure an API to make it more maintainable in upcoming lectures.
 
 ## Prerequisites
 
