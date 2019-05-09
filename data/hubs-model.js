@@ -10,8 +10,8 @@ module.exports = {
   update
 };
 
-function find(query) {
-  const { page = 1, limit = 2, sortby = 'id', sortdir = 'asc' } = query;
+function find(query = {}) {
+  const { page = 1, limit = 10, sortby = 'id', sortdir = 'asc' } = query;
   const offset = limit * (page - 1);
 
   let rows = db('hubs')
