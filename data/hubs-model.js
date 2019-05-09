@@ -10,11 +10,11 @@ module.exports = {
   update
 };
 
-function find(query = {}) {
+async function find(query = {}) {
   const { page = 1, limit = 10, sortby = 'id', sortdir = 'asc' } = query;
   const offset = limit * (page - 1);
 
-  let rows = db('hubs')
+  let rows = await db('hubs')
     .orderBy(sortby, sortdir)
     .limit(limit)
     .offset(offset);
@@ -34,14 +34,20 @@ async function add(hub) {
   return findById(id);
 }
 
-function remove(id) {
-  return db('hubs')
+async function remove(id) {
+  const removed = await findById(id);
+
+  await db('hubs')
     .where({ id })
     .del();
-}
 
-function update(id, changes) {
-  return db('hubs')
+  return removed;
+} 
+
+async function update(id, changes) {
+  await db('hubs')
     .where({ id })
-    .update(changes, '*');
+    .update(changes);
+
+  return findById(id);
 }
