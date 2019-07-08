@@ -1,33 +1,32 @@
 {
-  "name": "webapi-hubs",
+  "name": "webapi-i-guided",
   "version": "1.0.0",
-  "description": "Hubs guided project for Web API I module.",
+  "description": "Web API I Guided Project",
   "main": "index.js",
   "scripts": {
     "server": "nodemon index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LambdaSchool/webapi-hubs.git"
+    "url": "git+https://github.com/LambdaSchool/webapi-i-guided.git"
   },
   "keywords": [
+    "node",
     "backend",
     "guided",
-    "hubs",
     "lambda",
     "api"
   ],
   "author": "Lambda School",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LambdaSchool/webapi-hubs/issues"
+    "url": "https://github.com/LambdaSchool/webapi-i-guided/issues"
   },
-  "homepage": "https://github.com/LambdaSchool/webapi-hubs#readme",
+  "homepage": "https://github.com/LambdaSchool/webapi-i-guided#readme",
   "devDependencies": {
-    "nodemon": "^1.18.11"
+    "nodemon": "^1.19.1"
   },
   "dependencies": {
-    "knex": "^0.16.5",
-    "sqlite3": "^4.0.7"
+    "knex": "^0.18.3",
+    "sqlite3": "^4.0.9"
   }
 }
