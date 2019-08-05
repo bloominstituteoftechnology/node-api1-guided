@@ -8,7 +8,7 @@ The code for the guided project will be written in a single file for simplicity.
 
 ## Prerequisites
 
-- [Postman](https://www.getpostman.com/downloads/) installed.
+- a REST client like [Insomnia](https://insomnia.rest/download/) or [Postman](https://www.getpostman.com/downloads/) installed.
 
 ## Project Setup
 
