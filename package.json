@@ -23,10 +23,10 @@
   },
   "homepage": "https://github.com/LambdaSchool/webapi-i-guided#readme",
   "devDependencies": {
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.3"
   },
   "dependencies": {
-    "knex": "^0.19.1",
-    "sqlite3": "^4.0.9"
+    "knex": "^0.19.4",
+    "sqlite3": "^4.1.0"
   }
 }
