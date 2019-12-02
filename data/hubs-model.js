@@ -1,6 +1,10 @@
-const knex = require('knex');
-const config = require('../knexfile.js');
-const db = knex(config.development);
+const knex = require("knex");
+
+const knexfile = require("../knexfile.js");
+
+const environment = process.env.NODE_ENV || "development";
+const knexConfiguration = knexfile[environment];
+const db = knex(knexConfiguration);
 
 module.exports = {
   find,
@@ -11,10 +15,10 @@ module.exports = {
 };
 
 async function find(query = {}) {
-  const { page = 1, limit = 10, sortby = 'id', sortdir = 'asc' } = query;
+  const { page = 1, limit = 10, sortby = "id", sortdir = "asc" } = query;
   const offset = limit * (page - 1);
 
-  let rows = await db('hubs')
+  let rows = await db("hubs")
     .orderBy(sortby, sortdir)
     .limit(limit)
     .offset(offset);
@@ -23,13 +27,13 @@ async function find(query = {}) {
 }
 
 function findById(id) {
-  return db('hubs')
+  return db("hubs")
     .where({ id })
     .first();
 }
 
 async function add(hub) {
-  const [id] = await db('hubs').insert(hub);
+  const [id] = await db("hubs").insert(hub, "id");
 
   return findById(id);
 }
@@ -37,15 +41,15 @@ async function add(hub) {
 async function remove(id) {
   const removed = await findById(id);
 
-  await db('hubs')
+  await db("hubs")
     .where({ id })
     .del();
 
   return removed;
-} 
+}
 
 async function update(id, changes) {
-  await db('hubs')
+  await db("hubs")
     .where({ id })
     .update(changes);
 
