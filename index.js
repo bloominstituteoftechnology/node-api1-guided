@@ -1,9 +1,11 @@
+// import express from 'express'; // ES2015 Modules
 const express = require('express');
 
 const Hubs = require('./data/hubs-model')
 
 const server = express();
 
+// teaches express how to read JSON from the body
 server.use(express.json());// Needed for POST and PUT/Patch
 
 server.get('/', (req, res) =>{
@@ -33,6 +35,18 @@ server.post('/api/hubs', (req, res) => {
     }).catch(err => {
         console.log(err);
         res.status(500).json({ errorMessage: {err}})
+    })
+})
+
+// delete
+server.delete('/api/hubs/:id', (req, res) => {
+    const { id } = req.params;
+
+    Hubs.remove(id).then(removed => {
+        res.status(200).json(removed);
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json({ errorMessage: 'oops'})
     })
 })
 
