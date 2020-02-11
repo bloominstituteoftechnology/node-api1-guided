@@ -4,6 +4,8 @@ const Hubs = require('./data/hubs-model')
 
 const server = express();
 
+server.use(express.json());// Needed for POST and PUT/Patch
+
 server.get('/', (req, res) =>{
     res.json({hello: 'web 26'})
 })
@@ -17,6 +19,21 @@ server.get('/api/hubs', (req, res) => {
         console.log(err);
         res.status(500).json({ errorMessage: 'Oopsi Daisies'})
     });
+})
+
+// ADD a hub
+server.post('/api/hubs', (req, res) => {
+    // axios.post(url, data, options); the data will be in body of the request
+    const hubInfo = req.body;
+
+    console.log('body', req.body)
+    // validate the data, and if the data is valid save it
+    Hubs.add(hubInfo).then(hub => {
+        res.status(201).json(hub);
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json({ errorMessage: {err}})
+    })
 })
 
 
