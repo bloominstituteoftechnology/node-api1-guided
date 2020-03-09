@@ -26,7 +26,6 @@ A Lesson has:
 
 - a unique `id`.
 - a `name`.
-- a collection of `objectives`. Objectives have `id` and `title`.
 
 A Hub has:
 
@@ -34,7 +33,6 @@ A Hub has:
 - a `name`.
 - a `lessonId` that connects it to the corresponding Lesson.
 - a `cohort`.
-- a collection of `messages`. Messages have `id`, `sender` and `text`.
 
 ### Features
 
