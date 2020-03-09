@@ -1,0 +1,20 @@
+{
+  "name": "node-api1-guided",
+  "version": "1.0.0",
+  "description": "Guided project for **Node API 1** Module.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandonharris177/node-api1-guided.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brandonharris177/node-api1-guided/issues"
+  },
+  "homepage": "https://github.com/brandonharris177/node-api1-guided#readme"
+}
