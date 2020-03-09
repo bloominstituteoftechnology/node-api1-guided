@@ -14,7 +14,6 @@ The code for the guided project will be written in a single file for simplicity.
 
 - [ ] **fork** and clone this repository.
 - [ ] **CD into the folder** where you cloned **your fork**.
-- [ ] type `npm i` to download dependencies. This step is equivalent to using `yarn` for React Projects.
 
 ## Assignment
 
