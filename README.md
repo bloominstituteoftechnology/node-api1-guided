@@ -60,6 +60,6 @@ Here is a table with the `endpoint` descriptions:
 | Remove a Dog          | /api/dogs/{id}     | DELETE | deleted Dog       |
 | Add a Adopter         | /api/adopters      | POST   | the new Adopter   |
 | View list of Adopters | /api/adopters      | GET    | array of Adopters |
-| View Adopter details  | /api/adopters/{id} | GET    | an Adopter         |
+| View Adopter details  | /api/adopters/{id} | GET    | an Adopter        |
 | Update Adopter        | /api/adopters/{id} | PUT    | updated Adopter   |
 | Remove a Adopter      | /api/adopters/{id} | DELETE | deleted Adopter   |
