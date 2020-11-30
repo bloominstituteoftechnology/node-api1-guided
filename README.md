@@ -58,8 +58,8 @@ Here is a table with the `endpoint` descriptions:
 | View Dog details      | /api/dogs/{id}     | GET    | a Dog             |
 | Update Dog            | /api/dogs/{id}     | PUT    | updated Dog       |
 | Remove a Dog          | /api/dogs/{id}     | DELETE | deleted Dog       |
-| Add a Adopter         | /api/adopters      | POST   | the new Adopter   |
+| Add an Adopter        | /api/adopters      | POST   | the new Adopter   |
 | View list of Adopters | /api/adopters      | GET    | array of Adopters |
 | View Adopter details  | /api/adopters/{id} | GET    | an Adopter        |
 | Update Adopter        | /api/adopters/{id} | PUT    | updated Adopter   |
-| Remove a Adopter      | /api/adopters/{id} | DELETE | deleted Adopter   |
+| Remove an Adopter     | /api/adopters/{id} | DELETE | deleted Adopter   |
