@@ -21,14 +21,14 @@ Build a RESTful Web API to manage _"Dogs"_ and _"Adopters"_ for an animal shelte
 
 A Dog has:
 
-- a unique `dog_id`.
+- a unique `id`.
 - a `name`.
 - a `weight`.
 - an `adopter_id` (with a value of `null` until the Dog gets adopted).
 
 An Adopter has:
 
-- a unique `adopter_id`.
+- a unique `id`.
 - a `first_name`.
 - a `last_name`.
 - an `email`.
