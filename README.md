@@ -13,7 +13,7 @@ The code for the guided project will be written in a single file for simplicity.
 ## Project Setup
 
 - [ ] Clone this repository.
-- [ ] Move inside the projet folder.
+- [ ] Open the project folder in VSCode.
 
 ## Assignment
 
