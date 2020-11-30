@@ -23,7 +23,6 @@ A Dog has:
 
 - a unique `dog_id`.
 - a `name`.
-- a `breed`.
 - a `weight`.
 - an `adopter_id` (with a value of `null` until the Dog gets adopted).
 
