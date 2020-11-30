@@ -32,6 +32,7 @@ An Adopter has:
 - a unique `adopter_id`.
 - a `first_name`.
 - a `last_name`.
+- an `email`.
 - a `phone_number`.
 
 ### Features
