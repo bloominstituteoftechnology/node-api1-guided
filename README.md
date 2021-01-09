@@ -41,11 +41,6 @@ The Web API must provide a set of `endpoints` to fulfill the following needs:
 - view the details of a single Dog.
 - update the information of an existing Dog.
 - remove a Dog.
-- add a new Adopter.
-- view a list of existing Adopters.
-- view the details of a single Adopter.
-- update the information of an existing Adopter.
-- remove a Adopter.
 
 Here is a table with the `endpoint` descriptions:
 
@@ -56,8 +51,3 @@ Here is a table with the `endpoint` descriptions:
 | View Dog details      | /api/dogs/{id}     | GET    | a Dog             |
 | Update Dog            | /api/dogs/{id}     | PUT    | updated Dog       |
 | Remove a Dog          | /api/dogs/{id}     | DELETE | deleted Dog       |
-| Add an Adopter        | /api/adopters      | POST   | the new Adopter   |
-| View list of Adopters | /api/adopters      | GET    | array of Adopters |
-| View Adopter details  | /api/adopters/{id} | GET    | an Adopter        |
-| Update Adopter        | /api/adopters/{id} | PUT    | updated Adopter   |
-| Remove an Adopter     | /api/adopters/{id} | DELETE | deleted Adopter   |
