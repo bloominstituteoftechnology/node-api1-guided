@@ -16,9 +16,9 @@
 
 // [GET] / (Hello World endpoint)
 
-// [GET] /api/dogs/:id (Read of CRUD, fetch dog by :id)
+// [GET] /api/dogs/:id (R of CRUD, fetch dog by :id)
 
-// [GET] /api/dogs (Read of CRUD, fetch all dogs)
+// [GET] /api/dogs (R of CRUD, fetch all dogs)
 
 // [POST] /api/dogs (C of CRUD, create new dog from JSON payload)
 
