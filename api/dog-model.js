@@ -1,8 +1,8 @@
 const shortid = require('shortid')
 
 let dogs = [
-  { id: shortid.generate(), name: 'Captain', weight: 25, adopter_id: null },
-  { id: shortid.generate(), name: 'Doggo', weight: 13, adopter_id: null },
+  { id: shortid.generate(), name: 'Captain', weight: 25 },
+  { id: shortid.generate(), name: 'Doggo', weight: 13 },
 ]
 
 module.exports = {
@@ -18,14 +18,14 @@ module.exports = {
   },
 
   async create({ name, weight }) {
-    // INSERT INTO dogs (id, name, weight, adopter_id) VALUES ('xyz', 'Foo', 10, NULL);
-    const newDog = { id: shortid.generate(), name, weight, adopter_id: null }
+    // INSERT INTO dogs (id, name, weight) VALUES ('xyz', 'Foo', 10);
+    const newDog = { id: shortid.generate(), name, weight }
     dogs.push(newDog)
     return newDog
   },
 
   async update(id, changes) {
-    // UPDATE dogs SET name = 'Foo', weight = 9, adopter_id = 'abc' WHERE id = 1;
+    // UPDATE dogs SET name = 'Foo', weight = 9 WHERE id = 1;
     const dog = dogs.find(dog => dog.id === id)
     if (!dog) return null
 
