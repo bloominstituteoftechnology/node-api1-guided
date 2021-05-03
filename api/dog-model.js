@@ -6,40 +6,40 @@ let dogs = [
 ]
 
 module.exports = {
-  findAll() {
+  async findAll() {
     // SELECT * FROM dogs;
-    return Promise.resolve(dogs)
+    return dogs
   },
 
-  findById(id) {
+  async findById(id) {
     // SELECT * FROM dogs WHERE id = 1;
     const dog = dogs.find(d => d.id === id)
-    return Promise.resolve(dog)
+    return dog
   },
 
-  create({ name, weight }) {
+  async create({ name, weight }) {
     // INSERT INTO dogs (id, name, weight, adopter_id) VALUES ('xyz', 'Foo', 10, NULL);
     const newDog = { id: shortid.generate(), name, weight, adopter_id: null }
     dogs.push(newDog)
-    return Promise.resolve(newDog)
+    return newDog
   },
 
-  update(id, changes) {
+  async update(id, changes) {
     // UPDATE dogs SET name = 'Foo', weight = 9, adopter_id = 'abc' WHERE id = 1;
     const dog = dogs.find(dog => dog.id === id)
-    if (!dog) return Promise.resolve(null)
+    if (!dog) return null
 
     const updatedDog = { ...changes, id }
     dogs = dogs.map(d => (d.id === id) ? updatedDog : d)
-    return Promise.resolve(updatedDog)
+    return updatedDog
   },
 
-  delete(id) {
+  async delete(id) {
     // DELETE FROM dogs WHERE id = 1;
     const dog = dogs.find(dog => dog.id === id)
-    if (!dog) return Promise.resolve(null)
+    if (!dog) return null
 
     dogs = dogs.filter(d => d.id !== id)
-    return Promise.resolve(dog)
+    return dog
   }
 }
