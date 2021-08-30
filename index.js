@@ -3,4 +3,4 @@ const express = require('express') // import express from 'express' // ES6 modul
 
 const server = express() // instance of an express app
 
-server.get('/hello', () => {})
+server.get('/hello', (req, ) => {})
