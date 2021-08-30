@@ -4,7 +4,8 @@
   "description": "Guided project for **Node API 1** Module.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ketchup": "git fetch && git reset --hard origin/main"
   },
   "repository": {
     "type": "git",
