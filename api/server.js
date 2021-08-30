@@ -28,7 +28,7 @@ server.put('/api/dogs/:id', (req, res)=> {
 })
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
 server.delete('/api/dogs/:id', (req, res)=> {
-  res.json('d')
+  res.json('delete do with id')
 })
 
 // EXPOSING THE SERVER TO OTHER MODULES
