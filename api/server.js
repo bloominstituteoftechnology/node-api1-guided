@@ -12,7 +12,7 @@ server.get('/', (req, res) => {
 })
 // [GET] /api/dogs/:id (R of CRUD, fetch dog by :id)
 server.get('/api/dogs/:id', (req, res) => {
-  res.json('')
+  res.json('fetch dog by its id')
 })
 // [GET] /api/dogs (R of CRUD, fetch all dogs)
 // [POST] /api/dogs (C of CRUD, create new dog from JSON payload)
