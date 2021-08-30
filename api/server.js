@@ -8,7 +8,7 @@ const server = express()
 
 // [GET] / (Hello World endpoint)
 server.get('/', (req, res) => {
-  res.st
+  res.status(200).json({ message: 'hey there'})
 })
 // [GET] /api/dogs/:id (R of CRUD, fetch dog by :id)
 // [GET] /api/dogs (R of CRUD, fetch all dogs)
@@ -17,3 +17,4 @@ server.get('/', (req, res) => {
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
 
 // EXPOSING THE SERVER TO OTHER MODULES
+e
