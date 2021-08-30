@@ -5,5 +5,6 @@ const server = express() // instance of an express app
 
 server.get('/hello', (req, res) => {
   // pull info of interest out of the req
-  
+  res.json({ message: 'web 45 rocks'}) // sending back a response
 })
+
