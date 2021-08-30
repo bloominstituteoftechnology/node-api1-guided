@@ -27,6 +27,9 @@ server.put('/api/dogs/:id', (req, res)=> {
   res.json('update exisitn dog')
 })
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
+server.delete('/api/dogs/:id', (req, res)=> {
+  res.json('d')
+})
 
 // EXPOSING THE SERVER TO OTHER MODULES
 module.exports = server
