@@ -8,7 +8,7 @@ server.get('/hello', (req, res) => {
   res.json({ message: 'web 45 rocks'}) // sending back a response
 })
 
-server.use('*', (req, res) => {
+server.use('*', (req, res) => { // catch all, put it at the end of your endpoints
   res.status(404).json({ message: 'sorry, not found!'})
 })
 
