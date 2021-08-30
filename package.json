@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/LambdaSchool/node-api1-guided/issues"
   },
-  "homepage": "https://github.com/LambdaSchool/node-api1-guided#readme"
+  "homepage": "https://github.com/LambdaSchool/node-api1-guided#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "shortid": "^2.2.16"
+  }
 }
