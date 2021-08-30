@@ -16,7 +16,7 @@ server.get('/api/dogs/:id', (req, res) => {
 })
 // [GET] /api/dogs (R of CRUD, fetch all dogs)
 server.get('/api/dogs', (req, res) => {
-  res.json('')
+  res.json('fetch all dogs')
 })
 // [POST] /api/dogs (C of CRUD, create new dog from JSON payload)
 // [PUT] /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
