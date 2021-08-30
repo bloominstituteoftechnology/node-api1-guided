@@ -3,7 +3,7 @@ const express = require('express')
 // INSTANCE OF EXPRESS APP
 const server = express()
 // GLOBAL MIDDLEWARE //
-server.use(express.json()) // teaches express to reaxdj JSON
+server.use(express.json()) // teaches express to read JSON
 // ENDPOINTS
 
 // [GET] / (Hello World endpoint)
