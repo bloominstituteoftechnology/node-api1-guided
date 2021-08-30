@@ -9,7 +9,7 @@ server.get('/hello', (req, res) => {
 })
 
 server.use('*', (req, res) => {
-  
+  res.status(404).json({ message: 'sorry, not found!'})
 })
 
 server.listen(5000, () => { // only one program can hog 5000 at a time
