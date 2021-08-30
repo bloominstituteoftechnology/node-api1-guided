@@ -17,7 +17,7 @@ server.get('/api/dogs/:id', (req, res) => {
     .then()
     .catch(err => {
       console.log(err)
-      res.status(500)
+      res.status(500).json({ message: err.message })
     })
 })
 // [GET] /api/dogs (R of CRUD, fetch all dogs)
