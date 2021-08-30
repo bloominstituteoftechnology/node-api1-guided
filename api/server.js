@@ -1,5 +1,6 @@
 // IMPORTS AT THE TOP
 const express = require('express')
+const Dog = require('./dog-model.js')
 // INSTANCE OF EXPRESS APP
 const server = express()
 // GLOBAL MIDDLEWARE //
