@@ -8,3 +8,6 @@ server.get('/hello', (req, res) => {
   res.json({ message: 'web 45 rocks'}) // sending back a response
 })
 
+server.listen(5000, () => {
+  console.log()
+})
