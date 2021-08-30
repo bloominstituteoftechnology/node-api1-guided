@@ -14,7 +14,13 @@ server.get('/', (req, res) => {
 // [GET] /api/dogs/:id (R of CRUD, fetch dog by :id)
 server.get('/api/dogs/:id', (req, res) => {
   Dog.findById(req.params.id)
-    .then()
+    .then(dog => {
+      if(dog) {
+        res.json(dog)
+      } else {
+        res.status(404).json({ message: })
+      }
+    })
     .catch(err => {
       console.log(err)
       res.status(500).json({ message: err.message })
