@@ -1,4 +1,4 @@
-# Lambda Animal Shelter Web API
+# Animal Shelter Web API
 
 Guided project for **Node API 1** Module.
 
