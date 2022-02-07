@@ -36,7 +36,20 @@ server.get('/api/dogs/:id', (req, res) => {
 })
 
 server.post('/api/dogs', (req, res) => {
-    console.log(req.body);
+    let body = req.body;
+    if(!body.name) {
+        res.status(500).json({ message: `name is required` });
+    } else if(!body.weight) {
+        res.status(500).json({ message: `weight is required` });
+    } else {
+        dogModel.create(body)
+            .then(dog => {
+                res.status(201).json(dog);
+            })
+            .catch(() => {
+                res.status(500).json({ message: `could not create dog!` });
+            });
+    }
 });
 
 // [PUT]    /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
