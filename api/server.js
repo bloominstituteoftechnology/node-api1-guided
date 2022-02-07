@@ -25,6 +25,9 @@ server.get('/api/dogs/:id', (req, res) => {
         .then(dog => {
             res.json(dog);
         })
+        .catch(() => {
+            res.status(404).json({ message: `dog ${id} not found!` });
+        });
 })
 // [GET]    /api/dogs/:id (R of CRUD, fetch dog by :id)
 // [POST]   /api/dogs     (C of CRUD, create new dog from JSON payload)
