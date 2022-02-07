@@ -55,11 +55,11 @@ server.post('/api/dogs', (req, res) => {
 server.put('/api/dogs/:id', async (req, res) => {
     let { id } = req.params;
     try {
-        let dog = await dogModel.findById(id);
-        if(dog == null) {
-            res.status(404).json({ message: `dog ${id} not found!` });
-            return;
-        }
+        // let dog = await dogModel.findById(id);
+        // if(dog == null) {
+        //     res.status(404).json({ message: `dog ${id} not found!` });
+        //     return;
+        // }
 
         let body = req.body;
         if(!body.name) {
@@ -71,7 +71,12 @@ server.put('/api/dogs/:id', async (req, res) => {
         } else {
             let newDog = await dogModel.update(id, body);
             console.log(newDog);
-            res.status(200).json(newDog);
+            if(newDog == null) {
+                res.status(404).json({ message: `dog ${id} not found!` });
+                return;
+            } else {
+                res.status(200).json(newDog);
+            }
         }
     } catch(e) {
         res.status(500).json({ message: `could not update dog!` });
