@@ -1,6 +1,6 @@
 const express = require('express');
 
-// INSTANCE OF EXPRESS APP
+const server = express();
 
 // GLOBAL MIDDLEWARE
 
@@ -13,4 +13,4 @@ const express = require('express');
 // [PUT]    /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
 
-// EXPOSING THE SERVER TO OTHER MODULES
+module.exports = server;
