@@ -4,7 +4,9 @@ const server = express();
 
 server.use(express.json());
 
-// ENDPOINTS
+server.get('/', () => {
+    console.log('received get request');
+});
 
 // [GET]    /             (Hello World endpoint)
 // [GET]    /api/dogs     (R of CRUD, fetch all dogs)
