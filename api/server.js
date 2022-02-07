@@ -52,7 +52,28 @@ server.post('/api/dogs', (req, res) => {
     }
 });
 
+server.put('/api/dogs/:id', async (req, res) => {
+    let { id } = req.params;
+    try {
+        let dog = await dogModel.findById(id);
+        if(dog == null) {
+            res.status(404).json({ message: `dog ${id} not found!` });
+            return;
+        }
+
+        let body = req.body;
+        if(!body.name) {
+            res.status(500).json({ message: `name is required` });
+        } else if(!body.weight) {
+            res.status(500).json({ message: `weight is required` });
+        }
+    } catch(e) {
+        res.status(500).json({ message: `could not get dog!` });
+    }
+});
+
 // [PUT]    /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
+
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
 
 module.exports = server;
