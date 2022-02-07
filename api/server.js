@@ -12,8 +12,7 @@ server.get('/', (req, res) => {
 server.get('/api/dogs', (req, res) => {
     dogModel.findAll()
         .then(dogs => {
-            throw new Error();
-            // res.json(dogs);
+            res.json(dogs);
         })
         .catch(() => {
             res.status(500).json({ message: "could not get the dogs!" });
