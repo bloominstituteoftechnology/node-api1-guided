@@ -5,7 +5,7 @@ const server = express();
 server.use(express.json());
 
 server.get('/', (req, res) => {
-    console.log('received get request');
+    console.log('received get request!');
     res.json("hello world!");
 });
 
