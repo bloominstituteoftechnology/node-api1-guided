@@ -64,11 +64,16 @@ server.put('/api/dogs/:id', async (req, res) => {
         let body = req.body;
         if(!body.name) {
             res.status(500).json({ message: `name is required` });
+            return;
         } else if(!body.weight) {
             res.status(500).json({ message: `weight is required` });
+            return;
         }
+
+        let newDog = await dogModel.update(id, body);
+        res.status(204).json(newDog);
     } catch(e) {
-        res.status(500).json({ message: `could not get dog!` });
+        res.status(500).json({ message: `could not update dog!` });
     }
 });
 
