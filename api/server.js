@@ -1,5 +1,5 @@
 const express = require('express');
-const dogModel = require('./dog-model');
+const dogModel = require('./api/dog-model');
 const server = express();
 
 server.use(express.json());
