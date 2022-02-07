@@ -1,4 +1,4 @@
-// IMPORTS AT THE TOP
+const express = require('express');
 
 // INSTANCE OF EXPRESS APP
 
