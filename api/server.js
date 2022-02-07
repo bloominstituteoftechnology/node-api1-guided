@@ -23,6 +23,7 @@ server.get('/api/dogs/:id', (req, res) => {
     let { id } = req.params;
     dogModel.findById(id)
         .then(dog => {
+            console.log(dog);
             if(dog == null) {
                 res.status(404).json({ message: `dog ${id} not found!` });
             } else {
