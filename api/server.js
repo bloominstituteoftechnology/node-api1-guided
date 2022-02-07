@@ -71,7 +71,7 @@ server.put('/api/dogs/:id', async (req, res) => {
         } else {
             let newDog = await dogModel.update(id, body);
             console.log(newDog);
-            res.status(204).json(newDog);
+            res.status(200).json(newDog);
         }
     } catch(e) {
         res.status(500).json({ message: `could not update dog!` });
