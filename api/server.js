@@ -4,8 +4,9 @@ const server = express();
 
 server.use(express.json());
 
-server.get('/', () => {
+server.get('/', (req, res) => {
     console.log('received get request');
+    res.json("hello world!");
 });
 
 // [GET]    /             (Hello World endpoint)
