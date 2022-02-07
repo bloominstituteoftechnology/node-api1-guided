@@ -4,7 +4,8 @@
   "description": "Guided project for **Node API 1** Module.",
   "main": "index.js",
   "scripts": {
-    "ketchup": "git fetch && git reset --hard origin/web50-jamesblacklock"
+    "ketchup": "git fetch && git reset --hard origin/web50-jamesblacklock",
+    "server": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,8 @@
   "homepage": "https://github.com/bloominstituteoftechnology/node-api1-guided#readme",
   "dependencies": {
     "express": "^4.17.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
