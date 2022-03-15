@@ -2,7 +2,7 @@
 
 Guided project for **Node API 1** Module.
 
-In this project we will learn how to create a simple Web API using `Node.js` and `Express`, and cover the basics of server-side routing using global middleware.
+In this project we will learn how to create a simple Web API using `Node.js` and `Express`.
 
 ## Prerequisites
 
@@ -15,7 +15,7 @@ In this project we will learn how to create a simple Web API using `Node.js` and
 
 ## Assignment
 
-Build a RESTful Web API for an animal shelter to Create, Read, Update and Delete _"Dogs"_ .
+Build a RESTful Web API for an animal shelter to Create, Read, Update and Delete dogs.
 
 A Dog has:
 
