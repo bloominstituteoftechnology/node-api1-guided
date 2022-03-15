@@ -17,7 +17,7 @@ module.exports = {
 
   async findById(id) {
     // SELECT * FROM dogs WHERE id = 1;
-    const dog = dogs.find(d => d.id === id)
+    const dog = dogs.find(d => d.id == id)
     return dog
   },
 
@@ -30,20 +30,20 @@ module.exports = {
 
   async update(id, changes) {
     // UPDATE dogs SET name = 'Foo', weight = 9 WHERE id = 1;
-    const dog = dogs.find(dog => dog.id === id)
+    const dog = dogs.find(dog => dog.id == id)
     if (!dog) return null
 
     const updatedDog = { ...changes, id }
-    dogs = dogs.map(d => (d.id === id) ? updatedDog : d)
+    dogs = dogs.map(d => (d.id == id) ? updatedDog : d)
     return updatedDog
   },
 
   async delete(id) {
     // DELETE FROM dogs WHERE id = 1;
-    const dog = dogs.find(dog => dog.id === id)
+    const dog = dogs.find(dog => dog.id == id)
     if (!dog) return null
 
-    dogs = dogs.filter(d => d.id !== id)
+    dogs = dogs.filter(d => d.id != id)
     return dog
   }
 }
