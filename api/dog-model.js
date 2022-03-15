@@ -1,7 +1,7 @@
-const { nanoid } = require('nanoid')
+let id = 0
 
 function getId() {
-  return nanoid().slice(0, 5)
+  return ++id
 }
 
 let dogs = [
