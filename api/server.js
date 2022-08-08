@@ -56,7 +56,19 @@ server.post('/api/dogs', (req, res) => {
 });
 
 // [PUT]    /api/dogs/:id (U of CRUD, update dog with :id using JSON payload)
-server.put('/api/dogs/:id', (req, res) => {});
+server.put('/api/dogs/:id', (req, res) => {
+    Dogs.update(req.params.id, req.body)
+        .then(result => {
+            if(result == null) {
+                res.status(404).json({ message: 'dog not found' })
+            } else {
+                res.status(200).json(result);
+            }
+        })
+        .catch(() => {
+            res.status(500).json({ message: 'something weird happened!' })
+        });
+});
 
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
 server.delete('/api/dogs/:qq', (req, res) => {
