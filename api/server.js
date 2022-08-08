@@ -1,10 +1,15 @@
 // IMPORTS AT THE TOP
+const express = require('express');
 
 // INSTANCE OF EXPRESS APP
+const server = express();
 
 // GLOBAL MIDDLEWARE
 
 // ENDPOINTS
+server.get('/test1', (req, res) => {
+    res.send('test1!');
+});
 
 // [GET]    /             (Hello World endpoint)
 // [GET]    /api/dogs     (R of CRUD, fetch all dogs)
