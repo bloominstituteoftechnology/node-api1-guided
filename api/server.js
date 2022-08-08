@@ -29,6 +29,7 @@ server.get('/api/dogs', (req, res) => {
 server.get('/api/dogs/:id', (req, res) => {
     Dogs.findById(req.params.id)
         .then(result => {
+            console.log(result);
             res.json(result);
         });
 });
