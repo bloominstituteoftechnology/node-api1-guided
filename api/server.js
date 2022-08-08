@@ -50,7 +50,15 @@ server.post('/api/dogs', (req, res) => {});
 server.put('/api/dogs/:id', (req, res) => {});
 
 // [DELETE] /api/dogs/:id (D of CRUD, remove dog with :id)
-server.delete('/api/dogs/:id', (req, res) => {});
+server.delete('/api/dogs/:qq', (req, res) => {
+    Dogs.delete(req.params.qq)
+        .then(result => {
+            res.json(result);
+        })
+        .catch(() => {
+            res.status(500).json({ message: 'something weird happened!' })
+        });
+});
 
 
 // EXPOSING THE SERVER TO OTHER MODULES
