@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/bloominstituteoftechnology/node-api1-guided/issues"
   },
-  "homepage": "https://github.com/bloominstituteoftechnology/node-api1-guided#readme"
+  "homepage": "https://github.com/bloominstituteoftechnology/node-api1-guided#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
