@@ -12,6 +12,10 @@ server.get('/test1', (req, res) => {
 });
 
 // [GET]    /             (Hello World endpoint)
+server.get('/', (req, res) => {
+    res.json({ hello: 'world' });
+});
+
 // [GET]    /api/dogs     (R of CRUD, fetch all dogs)
 // [GET]    /api/dogs/:id (R of CRUD, fetch dog by :id)
 // [POST]   /api/dogs     (C of CRUD, create new dog from JSON payload)
