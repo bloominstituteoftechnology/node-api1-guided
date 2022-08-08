@@ -10,4 +10,4 @@ server.listen(9000, () => {
 
 server.get('/test1', (req, res) => {
     res.send('test1!');
-})
+});
