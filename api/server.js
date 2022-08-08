@@ -22,6 +22,9 @@ server.get('/api/dogs', (req, res) => {
     Dogs.findAll()
         .then(result => {
             res.json(result);
+        })
+        .catch(() => {
+            res.status(500).json({ message: 'something weird happened!' })
         });
 });
 
@@ -34,6 +37,9 @@ server.get('/api/dogs/:id', (req, res) => {
             } else {
                 res.json(result);
             }
+        })
+        .catch(() => {
+            res.status(500).json({ message: 'something weird happened!' })
         });
 });
 
