@@ -6,6 +6,7 @@ const Dogs = require('./dog-model');
 const server = express();
 
 // GLOBAL MIDDLEWARE
+server.use(express.json());
 
 // ENDPOINTS
 server.get('/test1', (req, res) => {
