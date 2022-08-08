@@ -53,7 +53,11 @@ server.put('/api/dogs/:id', (req, res) => {});
 server.delete('/api/dogs/:qq', (req, res) => {
     Dogs.delete(req.params.qq)
         .then(result => {
-            res.json(result);
+            if(result == null) {
+                res.status(404).json({ message: 'dog not found' })
+            } else {
+                res.json(result);
+            }
         })
         .catch(() => {
             res.status(500).json({ message: 'something weird happened!' })
