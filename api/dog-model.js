@@ -4,6 +4,11 @@ function getId() {
   return ++id
 }
 
+// dog has 3 fields
+// id: Number
+// name: String
+// weight: Number
+
 let dogs = [
   { id: getId(), name: 'Captain', weight: 25 },
   { id: getId(), name: 'Doggo', weight: 13 },
