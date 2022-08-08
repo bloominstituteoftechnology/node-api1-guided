@@ -36,7 +36,7 @@ server.get('/api/dogs/:id', (req, res) => {
             if(result == null) {
                 res.status(404).json({ message: 'dog not found' })
             } else {
-                res.json(result);
+                res.status(200).json(result);
             }
         })
         .catch(() => {
@@ -48,7 +48,7 @@ server.get('/api/dogs/:id', (req, res) => {
 server.post('/api/dogs', (req, res) => {
     Dogs.create(req.body)
         .then(result => {
-            res.status(201).json(result)
+            res.status(201).json(result);
         })
         .catch(() => {
             res.status(500).json({ message: 'something weird happened!' })
