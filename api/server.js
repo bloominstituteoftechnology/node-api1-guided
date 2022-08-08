@@ -49,6 +49,9 @@ server.post('/api/dogs', (req, res) => {
     Dogs.create(req.body)
         .then(result => {
             res.status(201).json(result)
+        })
+        .catch(() => {
+            res.status(500).json({ message: 'something weird happened!' })
         });
 });
 
