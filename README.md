@@ -42,3 +42,12 @@ Here is a table with the `endpoint` descriptions:
 | View Dog details      | /api/dogs/{id}     | GET    | a Dog             |
 | Update Dog            | /api/dogs/{id}     | PUT    | updated Dog       |
 | Remove a Dog          | /api/dogs/{id}     | DELETE | deleted Dog       |
+
+
+//  npm init -y
+// npm i express
+// npx gitignore node
+// node index.js
+// npm i -D nodemon
+// configured "server" scripts to use: "nodemon index.js"
+// npm run server
